@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">LDT</string>
+    <string name="LDT">LDT</string>
+    <string name="Warning">Warning! Make sure your GPS and Wifi are turned on before accessing this app.</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_splash_screen">SplashScreen</string>
+
+</resources>

@@ -13,6 +13,9 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.AlphaAnimation;
+import android.view.animation.Animation;
+import android.widget.TextView;
 import android.os.Build;
 
 public class SplashScreen extends ActionBarActivity {
@@ -28,7 +31,8 @@ public class SplashScreen extends ActionBarActivity {
 			getSupportFragmentManager().beginTransaction()
 					.add(R.id.container, new PlaceholderFragment()).commit();
 		}
- 
+      
+        
         new Handler().postDelayed(new Runnable() {
  
             /*

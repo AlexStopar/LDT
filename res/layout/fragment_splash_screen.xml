@@ -6,10 +6,34 @@
     android:orientation="vertical"
     tools:context="com.example.ldt.SplashScreen$PlaceholderFragment" >
     
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+    <TextView 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"  
         android:padding="32dp"
-        android:text="@string/Warning" />
-
+        android:layout_marginTop="32dp"
+        android:textSize="72sp"
+        android:gravity="center"
+        android:text="@string/LDT"
+        android:typeface="serif"
+        android:textStyle="bold"
+        android:textColor="#006600"
+        />
+    
+    <ImageView
+        android:contentDescription="@string/LDT"
+    	android:id="@+id/image1"
+    	android:layout_width="400dp"
+        android:layout_height="400dp"
+        android:layout_gravity="center"
+    	android:src="@drawable/radar"
+	/>
+    <TextView
+        	android:id="@+id/blink1"
+        	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:padding="32dp"
+        	android:textSize="14sp"
+        	android:textColor="#CC0000"
+        	android:text="@string/Warning" />
+	
 </LinearLayout>

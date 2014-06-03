@@ -1,9 +1,6 @@
 package com.example.ldt;
 
-import com.example.ldt.MainActivity.PlaceholderFragment;
-
 import android.support.v7.app.ActionBarActivity;
-import android.support.v7.app.ActionBar;
 import android.support.v4.app.Fragment;
 import android.content.Intent;
 import android.os.Bundle;
@@ -13,10 +10,6 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.animation.AlphaAnimation;
-import android.view.animation.Animation;
-import android.widget.TextView;
-import android.os.Build;
 
 public class SplashScreen extends ActionBarActivity {
 

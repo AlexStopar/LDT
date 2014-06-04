@@ -6,5 +6,23 @@
     <string name="Warning">Warning! Make sure your GPS and Wifi are turned on before accessing this app.</string>
     <string name="action_settings">Settings</string>
     <string name="title_activity_splash_screen">SplashScreen</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_activity_new_user">NewUser</string>
+    <string name="enter_username">Username</string>
+    <string name="enter_password">Password</string>
+    <string name="new_user">New User</string>
+    <string name="title_activity_database_login">DatabaseLogin</string>
+    <string name="title_activity_options">Options</string>
+    <string name="permission_launch_activity">Launches the LDT Activity</string>
+    <string name="title_activity_login">Login</string>
+    <string name="login">Login</string>
+    <string name="login_title">Login Information</string>
+    <string name="new_account">NewUser Registration</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="register">Register</string>
+    <string name="cancel">Cancel</string>
 
 </resources>

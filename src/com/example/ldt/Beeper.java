@@ -4,8 +4,8 @@ import android.media.AudioManager;
 import android.media.ToneGenerator;
 
 public class Beeper {
-	private ToneGenerator beeper;
-	private int beepDuration;
+	private static ToneGenerator beeper;
+	private static int beepDuration = 5;
 	
 	
 	public Beeper(){
@@ -18,7 +18,7 @@ public class Beeper {
 		beeper = new ToneGenerator(AudioManager.STREAM_ALARM, BeepData.getVolume());
 	}
 	
-	public void Beep(){
+	public static void Beep(){
 		beeper.startTone(ToneGenerator.TONE_CDMA_ALERT_CALL_GUARD, beepDuration * 1000);
 	}
 	

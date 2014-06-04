@@ -1,9 +1,9 @@
 package com.example.ldt;
 
 public class HoursData {
-	private int hours;
+	private static int hours;
 
-	public int getHours() {
+	public static int getHours() {
 		return hours;
 	}
 	
@@ -12,7 +12,7 @@ public class HoursData {
 	}
 
 	public void setHours(int hours) {
-		this.hours = hours;
+		HoursData.hours = hours;
 	}
 	
 	

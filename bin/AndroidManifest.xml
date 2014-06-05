@@ -5,7 +5,7 @@
     android:versionName="1.0" >
 
     <uses-sdk
-        android:minSdkVersion="8"
+        android:minSdkVersion="11"
         android:targetSdkVersion="18" />
 
     <application
@@ -25,6 +25,33 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.ldt.NewUser"
+            android:label="@string/title_activity_new_user" >
+        </activity>
+        <activity
+            android:name="com.example.ldt.DatabaseLogin"
+            android:label="@string/title_activity_database_login" >
+        </activity>
+        <activity
+            android:name="com.example.ldt.Options"
+            android:label="@string/title_activity_options" >
+        </activity>
+        <activity
+            android:name="com.example.ldt.Login"
+            android:label="@string/title_activity_login"
+            android:permission="com.example.ldt.LAUNCHACTIVITY"
+            android:screenOrientation="unspecified" >
+            <intent-filter>
+                <action android:name="com.example.ldt.Login" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.ldt.HoursBeepScreen"
+            android:label="@string/title_activity_hours_beep_screen" >
         </activity>
     </application>
 

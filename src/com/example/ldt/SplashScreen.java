@@ -37,10 +37,7 @@ public class SplashScreen extends ActionBarActivity {
             public void run() {
                 // This method will be executed once the timer is over
                 // Start your app main activity
-            	
-                Intent i = new Intent(SplashScreen.this, Login.class);
-                startActivity(i);
- 
+                startActivity(new Intent(SplashScreen.this, Login.class));
                 // close this activity
                 finish();
             }

@@ -2,8 +2,6 @@ package com.example.ldt;
 
 import java.util.List;
 
-import com.example.ldt.LoginDatabase;
-import com.example.ldt.R;
 
 import android.app.Activity;
 import android.app.AlertDialog;

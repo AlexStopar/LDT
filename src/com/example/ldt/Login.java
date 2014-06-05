@@ -52,7 +52,7 @@ import android.preference.PreferenceManager;
 				editor.commit();
 
 				// Bring up the GameOptions screen
-				startActivity(new Intent(this, Options.class));
+				//startActivity(new Intent(this, Options.class));
 //				 startActivity(new Intent(this, DummyActivity.class));
 				finish();
 			} else {

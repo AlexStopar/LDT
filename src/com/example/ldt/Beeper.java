@@ -1,25 +1,21 @@
 package com.example.ldt;
 
 import android.media.AudioManager;
+import android.media.SoundPool;
 import android.media.ToneGenerator;
 
 public class Beeper {
-	private static ToneGenerator beeper;
-	private static int beepDuration = 5;
+	private static SoundPool beeper;
+	private static int beepDuration;
 	
 	
-	public Beeper(){
-		beeper = new ToneGenerator(AudioManager.STREAM_ALARM, BeepData.getVolume());
-		beepDuration = BeepData.getDuration();
-	}
-	
-	public void updateBeeper(){
-		beepDuration = BeepData.getDuration();
-		beeper = new ToneGenerator(AudioManager.STREAM_ALARM, BeepData.getVolume());
+	public static void updateBeeper(){
+		beepDuration = (int) BeepData.getDuration();
+		beeper = new SoundPool(3, AudioManager.STREAM_ALARM, 0);
 	}
 	
 	public static void Beep(){
-		beeper.startTone(ToneGenerator.TONE_CDMA_ALERT_CALL_GUARD, beepDuration * 1000);
+		beeper.play(R.raw.beep, 0.99f, 0.99f, 0, 0, 1);
 	}
 	
 }

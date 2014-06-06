@@ -1,17 +1,17 @@
 package com.example.ldt;
 
 public class HoursData {
-	private static int hours;
+	private static long hours = 3;
 
-	public static int getHours() {
+	public static long getHours() {
 		return hours;
 	}
 	
-	public int getMinutes() {
+	public long getMinutes() {
 		return hours * 60;
 	}
 
-	public void setHours(int hours) {
+	public static void setHours(long hours) {
 		HoursData.hours = hours;
 	}
 	

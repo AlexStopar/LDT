@@ -2,20 +2,20 @@ package com.example.ldt;
 
 public class BeepData {
 	
-	private static int beepVolume = 5;
+	private static long beepVolume = 5;
 	
-	private static int beepDuration = 5;
+	private static long beepDuration = 5;
 	
-	public static int getVolume() {
+	public static long getVolume() {
 		return beepVolume;
 	}
-	public void setVolume(int volume) {
+	public static void setVolume(long volume) {
 		BeepData.beepVolume = volume;
 	}
-	public static int getDuration() {
+	public static long getDuration() {
 		return beepDuration;
 	}
-	public void setDuration(int duration) {
+	public static void setDuration(long duration) {
 		BeepData.beepDuration = duration;
 	}
 }

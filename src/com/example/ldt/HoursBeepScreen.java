@@ -1,64 +1,95 @@
 package com.example.ldt;
 
-import android.support.v7.app.ActionBarActivity;
-import android.support.v7.app.ActionBar;
-import android.support.v4.app.Fragment;
+import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
-import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
-import android.view.ViewGroup;
-import android.os.Build;
+import android.view.View.OnClickListener;
+import android.widget.Button;
+import android.widget.NumberPicker;
+import android.widget.NumberPicker.OnValueChangeListener;
 
-public class HoursBeepScreen extends ActionBarActivity {
-
+public class HoursBeepScreen extends Activity implements OnClickListener {
+	
+	HoursBeepDatabase hdb;
 	@Override
-	protected void onCreate(Bundle savedInstanceState) {
+	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_hours_beep_screen);
-
-		if (savedInstanceState == null) {
-			getSupportFragmentManager().beginTransaction()
-					.add(R.id.container, new PlaceholderFragment()).commit();
+		setContentView(R.layout.fragment_hours_beep_screen);
+		
+		//this.hdb = new HoursBeepDatabase(this);
+		
+		Beeper.updateBeeper();
+		NumberPicker hourPicker = (NumberPicker) findViewById(R.id.hourPicker);
+		hourPicker.setMinValue(1);
+		hourPicker.setMaxValue(24);
+		hourPicker.setWrapSelectorWheel(false);
+		hourPicker.setValue((int) HoursData.getHours());
+		
+		hourPicker.setOnValueChangedListener(new OnValueChangeListener(){
+			
+			@Override
+			public void onValueChange(NumberPicker picker, int oldVal, int newVal) {
+				HoursData.setHours((long) newVal);
+				updateDatabase();
+			}
+		});
+		
+		NumberPicker beepDurationPicker = (NumberPicker) findViewById(R.id.beep_durationPicker);
+		beepDurationPicker.setMinValue(1);
+		beepDurationPicker.setMaxValue(10);
+		beepDurationPicker.setWrapSelectorWheel(false);
+		beepDurationPicker.setValue((int) BeepData.getDuration());
+		
+		beepDurationPicker.setOnValueChangedListener(new OnValueChangeListener(){
+			
+			@Override
+			public void onValueChange(NumberPicker picker, int oldVal, int newVal) {
+				BeepData.setDuration((long) newVal);
+				Beeper.updateBeeper();
+				updateDatabase();
+			}
+		});
+		
+		NumberPicker beepVolumePicker = (NumberPicker) findViewById(R.id.beep_volumePicker);
+		beepVolumePicker.setMinValue(1);
+		beepVolumePicker.setMaxValue(10);
+		beepVolumePicker.setWrapSelectorWheel(false);
+		beepVolumePicker.setValue((int) BeepData.getVolume());
+		
+		beepVolumePicker.setOnValueChangedListener(new OnValueChangeListener(){
+			
+			@Override
+			public void onValueChange(NumberPicker picker, int oldVal, int newVal) {
+				BeepData.setVolume((long) newVal);
+				Beeper.updateBeeper();
+				updateDatabase();
+			}
+		});
+		
+		
+		View testBeep = (Button) findViewById(R.id.test_beep_button);
+		testBeep.setOnClickListener(this);
+		
+		View returnToOptions = (Button) findViewById(R.id.return_button);
+		returnToOptions.setOnClickListener(this);
+	}
+	
+	public void onClick(View v) {
+		switch (v.getId()) {
+		case R.id.return_button:
+			startActivity(new Intent(this, Login.class));
+			break;
+		case R.id.test_beep_button:
+			Beeper.Beep();
+			break;
 		}
 	}
-
-	@Override
-	public boolean onCreateOptionsMenu(Menu menu) {
-
-		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.hours_beep_screen, menu);
-		return true;
+	
+	private void updateDatabase() {
+		/*hdb.deleteAll();
+		hdb.insert(HoursData.getHours(), BeepData.getDuration(), BeepData.getVolume());*/
 	}
-
-	@Override
-	public boolean onOptionsItemSelected(MenuItem item) {
-		// Handle action bar item clicks here. The action bar will
-		// automatically handle clicks on the Home/Up button, so long
-		// as you specify a parent activity in AndroidManifest.xml.
-		int id = item.getItemId();
-		if (id == R.id.action_settings) {
-			return true;
-		}
-		return super.onOptionsItemSelected(item);
-	}
-
-	/**
-	 * A placeholder fragment containing a simple view.
-	 */
-	public static class PlaceholderFragment extends Fragment {
-
-		public PlaceholderFragment() {
-		}
-
-		@Override
-		public View onCreateView(LayoutInflater inflater, ViewGroup container,
-				Bundle savedInstanceState) {
-			View rootView = inflater.inflate(
-					R.layout.fragment_hours_beep_screen, container, false);
-			return rootView;
-		}
-	}
-
 }
+	
+	

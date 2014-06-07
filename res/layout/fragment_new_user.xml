@@ -79,7 +79,9 @@
         android:layout_alignLeft="@+id/textView3"
         android:layout_below="@+id/textView3"
         android:ems="10"
-        android:inputType="text" />
+        android:inputType="text" >
+                <requestFocus />
+        </EditText>
 
     <EditText
         android:id="@+id/password_confirm"
@@ -88,9 +90,6 @@
         android:layout_alignLeft="@+id/password"
         android:layout_below="@+id/textView2"
         android:ems="10"
-        android:inputType="textPassword" >
-
-        <requestFocus />
-    </EditText>
+        android:inputType="textPassword" />
 
 </RelativeLayout>

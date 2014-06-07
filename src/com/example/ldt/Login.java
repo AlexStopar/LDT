@@ -2,7 +2,6 @@ package com.example.ldt;
 
 import java.util.List;
 
-
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
@@ -14,6 +13,7 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
 import android.preference.PreferenceManager;
+import android.provider.Settings.Secure;
 
 
 	public class Login extends Activity implements OnClickListener {
@@ -22,25 +22,30 @@ import android.preference.PreferenceManager;
 		private EditText userNameEditableField;
 		private EditText passwordEditableField;
 		private final static String OPT_NAME = "name";
+		String deviceId;
 
 		@Override
 		public void onCreate(Bundle savedInstanceState) {
 			super.onCreate(savedInstanceState);
 			setContentView(R.layout.fragment_login);
-
+			
 			userNameEditableField = (EditText) findViewById(R.id.username_text);
 			passwordEditableField = (EditText) findViewById(R.id.password_text);
 			View btnLogin = (Button) findViewById(R.id.login_button);
 			btnLogin.setOnClickListener(this);
 			View btnNewUser = (Button) findViewById(R.id.new_user_button);
 			btnNewUser.setOnClickListener(this);
+			
+			deviceId = Secure.getString(this.getContentResolver(),
+	                Secure.ANDROID_ID);
 		}
 
 		private void checkLogin() {
 			String username = this.userNameEditableField.getText().toString();
 			String password = this.passwordEditableField.getText().toString();
 			this.dh = new LoginDatabase(this);
-			List<String> names = this.dh.selectAll(username, password);
+			List<String> names = this.dh.selectAll(username, password, deviceId);
+		
 			if (names.size() > 0) { // Login successful
 				// Save username as the name of the player
 				SharedPreferences settings = PreferenceManager
@@ -50,7 +55,7 @@ import android.preference.PreferenceManager;
 				editor.commit();
 
 				// Bring up the GameOptions screen
-				startActivity(new Intent(this, HoursBeepScreen.class));
+			//	startActivity(new Intent(this, Options.class));
 //				 startActivity(new Intent(this, DummyActivity.class));
 				finish();
 			} else {
@@ -73,6 +78,7 @@ import android.preference.PreferenceManager;
 				checkLogin();
 				break;
 			case R.id.new_user_button:
+
 				startActivity(new Intent(this, NewUser.class));
 				break;
 			}

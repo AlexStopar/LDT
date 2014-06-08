@@ -78,7 +78,8 @@ public class HoursBeepScreen extends Activity implements OnClickListener {
 	public void onClick(View v) {
 		switch (v.getId()) {
 		case R.id.return_button:
-			startActivity(new Intent(this, Login.class));
+			startActivity(new Intent(this, Options.class));
+			finish();
 			break;
 		case R.id.test_beep_button:
 			Beeper.Beep();

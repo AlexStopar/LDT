@@ -30,5 +30,10 @@
     <string name="beep_volume">Set Beep Volume: </string>
     <string name="test_beep">Test Beep</string>
     <string name="return_to_options">Return to Options</string>
+    <string name="goto_map">Go to Map</string>
+    <string name="goto_hours_beep">Set Hours and Beep Data</string>
+    <string name="goto_newuser">Register New User</string>
+    <string name="quit">Quit Application</string>
+    <string name="activate">Activate Tracking</string>
 
 </resources>

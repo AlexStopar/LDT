@@ -1092,7 +1092,8 @@ containing a value of this type.
         public static final int action_menu_divider=0x7f060016;
         public static final int action_menu_presenter=0x7f060017;
         public static final int action_mode_close_button=0x7f060024;
-        public static final int action_settings=0x7f060054;
+        public static final int action_settings=0x7f060059;
+        public static final int activate_button=0x7f060056;
         public static final int activity_chooser_view_content=0x7f060025;
         public static final int always=0x7f06000b;
         public static final int beep_duration=0x7f06003f;
@@ -1100,7 +1101,7 @@ containing a value of this type.
         public static final int beep_volume=0x7f060041;
         public static final int beep_volumePicker=0x7f060042;
         public static final int beginning=0x7f060011;
-        public static final int blink1=0x7f060053;
+        public static final int blink1=0x7f060058;
         public static final int cancel_button=0x7f06004f;
         public static final int checkbox=0x7f06002d;
         public static final int collapseActionView=0x7f06000d;
@@ -1117,23 +1118,27 @@ containing a value of this type.
         public static final int homeAsUp=0x7f060005;
         public static final int hourPicker=0x7f06003e;
         public static final int hours=0x7f06003d;
+        public static final int hours_beep_button=0x7f060054;
         public static final int icon=0x7f06002a;
         public static final int ifRoom=0x7f06000a;
         public static final int image=0x7f060027;
-        public static final int image1=0x7f060052;
+        public static final int image1=0x7f060057;
         public static final int listMode=0x7f060001;
         public static final int list_item=0x7f060029;
         public static final int login_button=0x7f06004b;
+        public static final int map_button=0x7f060053;
         public static final int middle=0x7f060012;
         public static final int never=0x7f060009;
         public static final int new_user_button=0x7f06004a;
         public static final int none=0x7f060010;
         public static final int normal=0x7f060000;
+        public static final int option_title=0x7f060052;
         public static final int password=0x7f060050;
         public static final int password_confirm=0x7f060051;
         public static final int password_text=0x7f060049;
         public static final int progress_circular=0x7f060018;
         public static final int progress_horizontal=0x7f060019;
+        public static final int quit_button=0x7f060055;
         public static final int radio=0x7f06002f;
         public static final int register_button=0x7f06004e;
         public static final int return_button=0x7f060044;
@@ -1221,18 +1226,21 @@ containing a value of this type.
         public static final int activity_login=0x7f030019;
         public static final int activity_main=0x7f03001a;
         public static final int activity_new_user=0x7f03001b;
-        public static final int activity_splash_screen=0x7f03001c;
-        public static final int fragment_hours_beep_screen=0x7f03001d;
-        public static final int fragment_login=0x7f03001e;
-        public static final int fragment_main=0x7f03001f;
-        public static final int fragment_new_user=0x7f030020;
-        public static final int fragment_splash_screen=0x7f030021;
-        public static final int support_simple_spinner_dropdown_item=0x7f030022;
+        public static final int activity_options=0x7f03001c;
+        public static final int activity_splash_screen=0x7f03001d;
+        public static final int fragment_hours_beep_screen=0x7f03001e;
+        public static final int fragment_login=0x7f03001f;
+        public static final int fragment_main=0x7f030020;
+        public static final int fragment_new_user=0x7f030021;
+        public static final int fragment_options=0x7f030022;
+        public static final int fragment_splash_screen=0x7f030023;
+        public static final int support_simple_spinner_dropdown_item=0x7f030024;
     }
     public static final class menu {
         public static final int hours_beep_screen=0x7f0d0000;
         public static final int main=0x7f0d0001;
-        public static final int splash_screen=0x7f0d0002;
+        public static final int options=0x7f0d0002;
+        public static final int splash_screen=0x7f0d0003;
     }
     public static final class raw {
         public static final int beep=0x7f050000;
@@ -1281,6 +1289,7 @@ containing a value of this type.
          */
         public static final int abc_shareactionprovider_share_with_application=0x7f0b000b;
         public static final int action_settings=0x7f0b0010;
+        public static final int activate=0x7f0b002e;
         public static final int app_name=0x7f0b000d;
         public static final int beep_duration=0x7f0b0026;
         public static final int beep_volume=0x7f0b0027;
@@ -1288,6 +1297,9 @@ containing a value of this type.
         public static final int confirm_password=0x7f0b0021;
         public static final int enter_password=0x7f0b0016;
         public static final int enter_username=0x7f0b0015;
+        public static final int goto_hours_beep=0x7f0b002b;
+        public static final int goto_map=0x7f0b002a;
+        public static final int goto_newuser=0x7f0b002c;
         public static final int hello_world=0x7f0b0012;
         public static final int hours=0x7f0b0025;
         public static final int login=0x7f0b001c;
@@ -1296,6 +1308,7 @@ containing a value of this type.
         public static final int new_user=0x7f0b0017;
         public static final int password=0x7f0b0020;
         public static final int permission_launch_activity=0x7f0b001a;
+        public static final int quit=0x7f0b002d;
         public static final int register=0x7f0b0022;
         public static final int return_to_options=0x7f0b0029;
         public static final int test_beep=0x7f0b0028;

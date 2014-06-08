@@ -7,7 +7,7 @@ import android.database.sqlite.SQLiteStatement;
 import android.util.Log;
 
 public class HoursBeepDatabase {
-	private static final String DATABASE_NAME = "LDT.db";
+	private static final String DATABASE_NAME = "LDTHB.db";
 	   private static final int DATABASE_VERSION = 1;
 	   private static final String TABLE_NAME = "HoursBeepInfo";
 	   private Context context;
@@ -30,7 +30,6 @@ public class HoursBeepDatabase {
 		   }
 	   
 		   public void deleteAll() {
-
 		      this.db.delete(TABLE_NAME, null, null);
 		   }
 		   

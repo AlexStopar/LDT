@@ -17,7 +17,7 @@ public class HoursBeepScreen extends Activity implements OnClickListener {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.fragment_hours_beep_screen);
 		
-		//this.hdb = new HoursBeepDatabase(this);
+		this.hdb = new HoursBeepDatabase(this);
 		
 		Beeper.updateBeeper();
 		NumberPicker hourPicker = (NumberPicker) findViewById(R.id.hourPicker);
@@ -87,8 +87,8 @@ public class HoursBeepScreen extends Activity implements OnClickListener {
 	}
 	
 	private void updateDatabase() {
-		/*hdb.deleteAll();
-		hdb.insert(HoursData.getHours(), BeepData.getDuration(), BeepData.getVolume());*/
+		hdb.deleteAll();
+		hdb.insert(HoursData.getHours(), BeepData.getDuration(), BeepData.getVolume());
 	}
 }
 	

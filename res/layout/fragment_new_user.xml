@@ -9,7 +9,7 @@
     tools:context="com.example.ldt.NewUser$PlaceholderFragment" >
 
     <TextView
-        android:id="@+id/textView1"
+        android:id="@+id/timeTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
@@ -67,7 +67,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/register_button"
-        android:layout_below="@+id/textView1"
+        android:layout_below="@+id/timeTextView"
         android:layout_marginTop="35dp"
         android:text="@string/username"
         android:textSize="15.5sp" />

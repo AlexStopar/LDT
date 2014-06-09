@@ -16,6 +16,7 @@
     <string name="title_activity_options">Options</string>
     <string name="permission_launch_activity">Launches the LDT Activity</string>
     <string name="title_activity_login">Login</string>
+    <string name="locate_phone">Locate Phone</string>
     <string name="login">Login</string>
     <string name="login_title">Login Information</string>
     <string name="new_account">NewUser Registration</string>
@@ -35,5 +36,7 @@
     <string name="goto_newuser">Register New User</string>
     <string name="quit">Quit Application</string>
     <string name="activate">Activate Tracking</string>
+    <string name="title_activity_map">Map</string>
+    <string name="time">Time: </string>
 
 </resources>

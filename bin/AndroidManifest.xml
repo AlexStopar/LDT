@@ -53,6 +53,10 @@
             android:name="com.example.ldt.HoursBeepScreen"
             android:label="@string/title_activity_hours_beep_screen" >
         </activity>
+        <activity
+            android:name="com.example.ldt.Map"
+            android:label="@string/title_activity_map" >
+        </activity>
     </application>
 
 </manifest>
